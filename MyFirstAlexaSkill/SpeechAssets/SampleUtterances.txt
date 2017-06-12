@@ -1,0 +1,8 @@
+﻿HelloWorldIntent hello my new friend
+HelloWorldIntent what is going on
+
+FussyDaughterIntent why is my daughter so fussy
+
+AMAZON.CancelIntent cease everything
+AMAZON.StopIntent make it stop
+AMAZON.HelpIntent give me guidance
