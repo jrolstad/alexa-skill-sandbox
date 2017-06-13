@@ -1,10 +1,8 @@
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Azure.WebJobs.Host;
-using System;
 using MyFirstAlexaSkill.Application;
 
 namespace MyFirstAlexaSkill
@@ -21,17 +19,22 @@ namespace MyFirstAlexaSkill
 
             var requestData = req.Content.ReadAsAsync<AlexaServiceRequest>().Result;
 
-            if(requestData?.request?.intent?.name == "FussyDaughterIntent")
+            var intentName = requestData?.request?.intent?.name;
+            var outputSpeech = GetSpeechResponse(intentName);
+            var response = AlexaServiceResponse.CreateOutputSpeechResponse(intentName, outputSpeech);
+
+            return req.CreateResponse(HttpStatusCode.OK, response);
+        }
+
+        private static string GetSpeechResponse(string intent)
+        {
+            switch (intent)
             {
-                var response = AlexaServiceResponse.CreateOutputSpeechResponse(requestData?.request?.intent?.name, "It's because her name is Kenzie");
-                return req.CreateResponse(HttpStatusCode.OK, response);
+                case "FussyDaughterIntent":
+                    return "It's because her name is Kenzie";
+                default:
+                    return "I'm sorry I don't know how to do that";
             }
-            else
-            {
-                var response = AlexaServiceResponse.CreateOutputSpeechResponse(requestData?.request?.intent?.name, "Hello World");
-                return req.CreateResponse(HttpStatusCode.OK, response);
-            }
-           
         }
     }
 }
