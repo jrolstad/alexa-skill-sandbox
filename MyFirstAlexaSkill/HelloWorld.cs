@@ -32,6 +32,8 @@ namespace MyFirstAlexaSkill
             {
                 case "FussyDaughterIntent":
                     return "It's because her name is Kenzie";
+                case "LunaCrazyIntent":
+                    return "Because she is a crazy puppy";
                 default:
                     return "I'm sorry I don't know how to do that";
             }

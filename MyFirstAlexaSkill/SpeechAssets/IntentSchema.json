@@ -9,6 +9,10 @@
       "slots": []
     },
     {
+      "intent": "LunaCrazyIntent",
+      "slots": []
+    },
+    {
       "intent": "AMAZON.CancelIntent",
       "slots": []
     },

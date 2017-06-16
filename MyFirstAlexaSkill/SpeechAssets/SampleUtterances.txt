@@ -3,6 +3,8 @@ HelloWorldIntent what is going on
 
 FussyDaughterIntent why is my daughter so fussy
 
+LunaCrazyIntent why is luna so crazy
+
 AMAZON.CancelIntent cease everything
 AMAZON.StopIntent make it stop
 AMAZON.HelpIntent give me guidance
