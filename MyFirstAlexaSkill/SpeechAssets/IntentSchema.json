@@ -13,6 +13,10 @@
       "slots": []
     },
     {
+      "intent": "LiamFeetIntent",
+      "slots": []
+    },
+    {
       "intent": "AMAZON.CancelIntent",
       "slots": []
     },

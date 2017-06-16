@@ -5,6 +5,8 @@ FussyDaughterIntent why is my daughter so fussy
 
 LunaCrazyIntent why is luna so crazy
 
+LiamFeetIntent why are liam's feet so stinky
+
 AMAZON.CancelIntent cease everything
 AMAZON.StopIntent make it stop
 AMAZON.HelpIntent give me guidance
